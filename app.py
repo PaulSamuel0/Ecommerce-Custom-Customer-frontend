@@ -6,7 +6,8 @@ import os
 # load enviroment veriables from .env file
 load_dotenv()
 
-base_url = st.secrets.get("BASE_URL", os.getenv("BASE_URL", "http://127.0.0.1:8000"))
+base_url = os.getenv("BASE_URL", "http://localhost:8000")
+
 API_URL = base_url + "/api/predict"
 
 st.set_page_config(
